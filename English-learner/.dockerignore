@@ -1,0 +1,21 @@
+# Maven 构建产物（重新编译）
+target/
+*.class
+*.jar
+*.war
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Git
+.git/
+.gitignore
+
+# 本地上传目录（生产不用）
+uploads/
+
+# 临时文件
+*.tmp
+*.log

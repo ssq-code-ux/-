@@ -1,0 +1,1211 @@
+{
+ "url": "http://localhost:4173/",
+ "at": "2026-10-21T10:37:54.926Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.32,
+    0.32
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 948,
+     "screens": 1.1,
+     "words": 21,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 1,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "login-bg-Prrqs7gh.png"
+     ],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 22,
+     "vw": 1.5,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 360,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "智能学习助手",
+     "words": 1,
+     "lines": 1,
+     "size": 22,
+     "font": "DM Sans"
+    },
+    "headings": [
+     {
+      "text": "让英语进步看得见",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 30,
+      "vw": 2.1,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.3,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.3,
+      "top": 532,
+      "tag": "p",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.97,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.03,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      22,
+      26,
+      30
+     ],
+     "sizeCount": 7,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 30,
+      "vw": 2.1,
+      "font": "DM Sans",
+      "text": "让英语进步看得见"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0.07,
+     "centerShare": 0.25,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f9fafb",
+     "bodyBgHsl": {
+      "h": 210,
+      "s": 0.2,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f9fafb",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.2,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 259,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#ffffff",
+       "share": 0.52
+      },
+      {
+       "color": "#f56c6c",
+       "share": 0.26
+      },
+      {
+       "color": "#5f6672",
+       "share": 0.09
+      },
+      {
+       "color": "#111827",
+       "share": 0.06
+      },
+      {
+       "color": "#b8336a",
+       "share": 0.03
+      }
+     ],
+     "button": {
+      "bg": "#b8336a",
+      "hsl": {
+       "h": 335,
+       "s": 0.57,
+       "l": 0.46
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      },
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "登 录"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 1,
+     "mediaRadius": 12,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.16
+     }
+    ],
+    "nav": null,
+    "fontsLoaded": [
+     "dm sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 948,
+    "margins": {
+     "left": 220,
+     "right": 252
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "智能学习助手",
+      "size": 22,
+      "top": 360,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0.2,
+    "voidBox": {
+     "x": 0,
+     "y": 720,
+     "w": 1440,
+     "h": 180
+    }
+   },
+   "app": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "dark": false,
+    "ground": "#f9fafb",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 220,
+     "right": 252
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 22,
+     "vw": 1.5,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 360,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 1,
+     "radii": [
+      [
+       12,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      22,
+      30
+     ]
+    },
+    "title": {
+     "text": "智能学习助手",
+     "size": 22,
+     "top": 360
+    },
+    "colourShare": 0.017
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.2,
+    0.2
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 1072,
+     "screens": 1,
+     "words": 11,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 22,
+     "vw": 2.9,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 422,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "智能学习助手",
+     "words": 1,
+     "lines": 1,
+     "size": 22,
+     "font": "DM Sans"
+    },
+    "headings": [
+     {
+      "text": "智",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 26,
+      "vw": 3.4,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.07,
+      "top": 354,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      22,
+      26
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 26,
+      "vw": 3.4,
+      "font": "DM Sans",
+      "text": "智"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.49,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f9fafb",
+     "bodyBgHsl": {
+      "h": 210,
+      "s": 0.2,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f9fafb",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.2,
+        "l": 0.98
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f56c6c",
+       "share": 0.51
+      },
+      {
+       "color": "#5f6672",
+       "share": 0.18
+      },
+      {
+       "color": "#111827",
+       "share": 0.12
+      },
+      {
+       "color": "#b8336a",
+       "share": 0.06
+      },
+      {
+       "color": "#303133",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#b8336a",
+      "hsl": {
+       "h": 335,
+       "s": 0.57,
+       "l": 0.46
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      },
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "登 录"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": null,
+    "fontsLoaded": [
+     "dm sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 1072,
+    "margins": {
+     "left": 272,
+     "right": 272
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "智能学习助手",
+      "size": 22,
+      "top": 422,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "dark": false,
+    "ground": "#f9fafb",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 272,
+     "right": 272
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 22,
+     "vw": 2.9,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 422,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": [
+      {
+       "gap": 46,
+       "at": 704,
+       "panel": "智能学习助手"
+      }
+     ]
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 1,
+     "radii": [
+      [
+       12,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      22,
+      30
+     ]
+    },
+    "title": {
+     "text": "智能学习助手",
+     "size": 22,
+     "top": 422
+    },
+    "colourShare": 0.015
+   },
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 2,
+   "filled": [
+    0.39,
+    0.36
+   ],
+   "motion": {
+    "elements": 3,
+    "css": 0,
+    "transitions": 3,
+    "scripted": 0,
+    "videos": 0,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 868,
+     "screens": 1,
+     "words": 11,
+     "img": 1,
+     "video": 0,
+     "canvas": 0,
+     "svg": 2,
+     "sections": 0,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 0,
+     "videoCount": 0,
+     "uiPictures": 0,
+     "pictureSamples": [],
+     "blendText": 0,
+     "sideScrollers": 0,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 0
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 20,
+     "vw": 5.1,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 320,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "h1": {
+     "text": "智能学习助手",
+     "words": 1,
+     "lines": 1,
+     "size": 20,
+     "font": "DM Sans"
+    },
+    "headings": [
+     {
+      "text": "智",
+      "words": 1,
+      "chars": 1,
+      "lines": 1,
+      "size": 26,
+      "vw": 6.7,
+      "font": "DM Sans",
+      "weight": 700,
+      "tracking": 0,
+      "leading": 1.2,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "center",
+      "position": "center",
+      "widthRatio": 0.14,
+      "top": 252,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 1,
+     "maxLines": 1,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 1,
+     "medianWords": null,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "DM Sans",
+       "share": 0.94,
+       "mono": false
+      },
+      {
+       "family": "Arial",
+       "share": 0.06,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      20,
+      26
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": null,
+     "measureChars": null,
+     "max": {
+      "size": 26,
+      "vw": 6.7,
+      "font": "DM Sans",
+      "text": "智"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.49,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#f9fafb",
+     "bodyBgHsl": {
+      "h": 210,
+      "s": 0.2,
+      "l": 0.98
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#f9fafb",
+       "top": 0,
+       "hsl": {
+        "h": 210,
+        "s": 0.2,
+        "l": 0.98
+       }
+      },
+      {
+       "color": "#ffffff",
+       "top": 229,
+       "hsl": {
+        "h": 0,
+        "s": 0,
+        "l": 1
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#f56c6c",
+       "share": 0.51
+      },
+      {
+       "color": "#5f6672",
+       "share": 0.18
+      },
+      {
+       "color": "#111827",
+       "share": 0.12
+      },
+      {
+       "color": "#b8336a",
+       "share": 0.06
+      },
+      {
+       "color": "#303133",
+       "share": 0.06
+      }
+     ],
+     "button": {
+      "bg": "#b8336a",
+      "hsl": {
+       "h": 335,
+       "s": 0.57,
+       "l": 0.46
+      },
+      "fg": "#ffffff"
+     },
+     "lowContrast": [
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      },
+      {
+       "text": "服务器内部错误，请查看日志",
+       "ratio": 2.6,
+       "need": 4.5,
+       "size": 14,
+       "fg": "#f56c6c",
+       "bg": "#fef0f0"
+      }
+     ]
+    },
+    "buttons": {
+     "count": 1,
+     "inHero": 1,
+     "radius": "pill",
+     "height": 44,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "登 录"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 1,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 1,
+     "boxRadius": 12,
+     "squareMedia": 0,
+     "roundedMedia": 0,
+     "mediaRadius": 0,
+     "textShadow": 0,
+     "cardRows": []
+    },
+    "heroMedia": [],
+    "nav": null,
+    "fontsLoaded": [
+     "dm sans"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 868,
+    "margins": {
+     "left": 83,
+     "right": 83
+    },
+    "sections": [],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "智能学习助手",
+      "size": 20,
+      "top": 320,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [],
+    "leftBlocks": 0,
+    "bodySize": 16,
+    "stage": false,
+    "explains": false,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "dark": false,
+    "ground": "#f9fafb",
+    "sidebar": null,
+    "topbar": null,
+    "canvas": {
+     "left": 83,
+     "right": 83
+    },
+    "hero": {
+     "text": "智能学习助手",
+     "words": 1,
+     "chars": 6,
+     "lines": 1,
+     "size": 20,
+     "vw": 5.1,
+     "font": "DM Sans",
+     "weight": 700,
+     "tracking": 0,
+     "leading": 1.2,
+     "top": 320,
+     "tag": "h1",
+     "kind": "heading",
+     "align": "left",
+     "position": "left"
+    },
+    "charts": 0,
+    "layout": {
+     "panels": 1,
+     "firstScreen": 1,
+     "ragged": [],
+     "voids": []
+    },
+    "tiles": 0,
+    "panels": {
+     "count": 1,
+     "radii": [
+      [
+       12,
+       1
+      ]
+     ],
+     "heavyBorders": 0,
+     "borderSamples": [],
+     "heavyShadows": 0,
+     "softShadows": 0,
+     "shadowSamples": [],
+     "glass": 0
+    },
+    "chips": {
+     "count": 0,
+     "hues": 0,
+     "samples": []
+    },
+    "numbers": {
+     "cells": 0,
+     "leftAligned": 0,
+     "figures": 0,
+     "tabularShare": null,
+     "kpiMax": null
+    },
+    "rows": null,
+    "chartHues": 0,
+    "placeholders": [],
+    "type": {
+     "under13": 0,
+     "tiny": 0,
+     "tinySamples": [],
+     "sizes": [
+      13,
+      14,
+      15,
+      16,
+      20,
+      30
+     ]
+    },
+    "title": {
+     "text": "智能学习助手",
+     "size": 20,
+     "top": 320
+    },
+    "colourShare": 0.033
+   },
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "contrast",
+   "width": 1440,
+   "message": "Low-contrast text: \"服务器内部错误，请查看日志\" 2.6:1 needs 4.5:1; \"服务器内部错误，请查看日志\" 2.6:1 needs 4.5:1",
+   "fix": "Darken or lighten the text colour.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\desktop-fold.jpg",
+   "pages": [
+    "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\desktop-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\tablet-fold.jpg",
+   "pages": [
+    "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\tablet-page-01.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\mobile-fold.jpg",
+   "pages": [
+    "C:\\Users\\DELL\\Desktop\\服务器版\\frontend\\.taste-skill\\inspect-login\\mobile-page-01.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

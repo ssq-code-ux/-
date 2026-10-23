@@ -1,0 +1,1 @@
+package com.example.englishtutor.dto; import lombok.Data; @Data public class ProfileDTO{ private Long studentId; private String grade; private String subject; private String textbook; private String level; private String goals; private String weakPoints; }

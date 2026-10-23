@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#667eea" />
+  <title>离线中 - 智乐学</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e8f0fe 0%, #f3e5f5 50%, #fce4ec 100%);
+      padding: 24px;
+    }
+    .card {
+      max-width: 420px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 44px 32px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      color: #303133;
+    }
+    .emoji { font-size: 56px; margin-bottom: 16px; }
+    h1 { font-size: 20px; margin-bottom: 10px; }
+    .desc { font-size: 14px; color: #909399; line-height: 1.7; margin-bottom: 24px; }
+    button {
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 36px;
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    button:hover { opacity: 0.9; }
+    button:active { transform: scale(0.96); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">📴</div>
+    <h1>网络连接已断开</h1>
+    <p class="desc">
+      当前处于离线状态，暂时无法加载最新数据。<br />
+      已缓存的「单词记忆卡片」等功能仍可离线使用。
+    </p>
+    <button onclick="location.reload()">重新连接</button>
+  </div>
+  <script>
+    // 网络恢复后自动返回应用
+    window.addEventListener('online', function () { location.replace('/'); });
+  </script>
+</body>
+</html>

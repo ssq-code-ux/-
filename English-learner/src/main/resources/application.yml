@@ -1,0 +1,67 @@
+server:
+  port: 8081
+  address: 0.0.0.0
+  tomcat:
+    # Tomcat 层面的 POST 大小限制（含非 multipart 表单），对齐 multipart 配置（APK 安装包上传需较大额度）
+    max-http-form-post-size: 210MB
+    # 连接超时（仅初始连接建立，不影响数据传输），保持默认
+    connection-timeout: 60s
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/english_tutor_system?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 210MB
+      # 文件写入磁盘的阈值：设为 0 表示全部写入磁盘，避免大文件占满内存
+      file-size-threshold: 0
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+# ========== JWT 双 Token 配置 ==========
+# Access Token 有效期 7 天：把「长时间没操作被自动退出登录」降到几乎不会发生
+# Refresh Token 长有效期（10 年）且落库 sys_refresh_token，且刷新时不再轮换（一直复用同一枚），
+# 因此 Session 基本永久有效，除非用户主动退出登录
+jwt:
+  # 与微服务版保持同一密钥
+  secret: EnglishTutorSecretKey2024!@#VeryLongSecureKey
+  access-expiration: 604800000
+  refresh-expiration: 315360000000
+
+# 阿里云 OSS 文件存储（服务器模式）
+aliyun:
+  oss:
+    endpoint: https://oss-cn-beijing.aliyuncs.com
+    accessKeyId: ${OSS_ACCESS_KEY_ID:}
+    accessKeySecret: ${OSS_ACCESS_KEY_SECRET:}
+    bucketName: java-ssq-mine
+    region: cn-beijing
+
+# ========== AI 配置（阿里云百炼/通义千问 — OpenAI 兼容接口） ==========
+# 注意：代码会在 base-url 后拼接 /v1/chat/completions，故这里写到 /compatible-mode 为止
+ai:
+  deepseek:
+    api-key: sk-ws-H.EIHPRYX.gR77.MEYCIQC9-VJRZ4d1vd-3InXXA6g-ldH8EZTzt20-FQTrJrVTLwIhANmDj4oD6dyUOD3IFZ1agUlQEVmFbC-dFxcdyLmtN
+    base-url: https://dashscope.aliyuncs.com/compatible-mode
+    # 模型档位（同一个兼容接口下换模型只改这一行）：
+    #   qwen-flash  最快最便宜（约 plus 的 1/5 价格），出卷解析/判分/聊天都够用 ← 默认
+    #   qwen-plus   能力更强但明显更慢更贵，若解析质量不稳再切回
+    model: qwen-flash
+    # 图片识别出卷用的多模态模型（同一个 OpenAI 兼容接口，只是模型名不同）：
+    #   qwen-vl-plus  便宜够用 ← 默认；qwen-vl-max 识别更准但更贵，转录质量不稳时可切换（或设环境变量 AI_VISION_MODEL）
+    vision-model: ${AI_VISION_MODEL:qwen-vl-plus}
+    # Qwen3 系列可能开思考模式：先吐一大段思考过程再给答案，对 JSON 结构化任务是纯开销，显式关掉
+    enable-thinking: false
+
+# ========== 阿里云短信（可选：家长端作业逾期提醒） ==========
+# 四项配置齐全才真实发送，任一缺失自动降级为"仅站内通知"，不影响启动
+sms:
+  aliyun:
+    access-key-id: ${ALIYUN_SMS_ACCESS_KEY_ID:}
+    access-key-secret: ${ALIYUN_SMS_ACCESS_KEY_SECRET:}
+    sign-name: ${ALIYUN_SMS_SIGN_NAME:}
+    template-code: ${ALIYUN_SMS_TEMPLATE_CODE:}

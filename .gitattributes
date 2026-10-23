@@ -1,0 +1,2 @@
+# 统一换行符为 LF：防止 Windows CRLF 破坏服务器上的 Dockerfile/SQL/配置
+* text=auto eol=lf

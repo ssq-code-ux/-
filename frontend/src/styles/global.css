@@ -1,0 +1,477 @@
+/* ============================================================
+   全局样式 — Glass 玻璃态 + 设计令牌
+   ============================================================ */
+
+/* ═══════════════ 设计令牌 — tasteskill v2 · App sheet「Accent ladder」 ═══════════════
+   seed 1794258145 · kind smb-admin · light · drawn 2026-10-21
+   一条品牌色相 #b8336a：深色只上小标记（主操作/数据/激活图标），面积一律用它的浅色调。
+   house rules：无渐变、静置无阴影、颜色只上数据与单一主操作、无靛蓝/紫。 */
+:root {
+  /* —— 「智慧校园」浅蓝体系 ——
+   浅蓝底 + 白卡 + 彩色图标块 + 柔阴影；主色为蓝，绿/橙/红做状态。 */
+  --ground: #f4f7fc;
+  --surface: #ffffff;
+  --raised: #f1f5fa;
+  --border: #e6ebf3;
+  --rule: #eef2f8;
+  --control: #cbd5e3;
+  --text: #1f2d3d;
+  --muted: #6b7a90;
+  --accent: #2f8ff0;          /* 主色：蓝 */
+  --accent-soft: #e9f2fe;
+  --accent-track: #d3e6fd;
+  --accent-ink: #1b6fd0;
+  --red: #e5484d;
+  --red-soft: #fdecec;
+  --board: #14b8a6;           /* 绿：完成 / 达标 */
+  --board-soft: #e6f7f5;
+  --amber: #e2a03f;
+  --amber-soft: #fdf3e3;
+  --positive: #14b8a6;
+  --negative: #e5484d;
+  --warning: #e2a03f;
+  --chart-1: #2f8ff0;
+  --chart-2: #14b8a6;
+  --chart-3: #e2a03f;
+
+  /* —— 排版比例（一套字号，别再用 13/14 混着猜） —— */
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-base: 14px;
+  --fs-md: 15px;
+  --fs-lg: 17px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+  --w-regular: 400;
+  --w-medium: 500;
+  --w-semibold: 600;
+  --lh-tight: 1.25;
+  --lh-base: 1.6;
+
+  /* —— 兼容既有变量名（全站复用，改这里即改全站） —— */
+  --color-primary: var(--accent);
+  --color-primary-dark: var(--accent-ink);
+  --color-bg: var(--ground);
+  --color-bg-card: var(--surface);
+  --color-surface: var(--raised);
+  --color-bg-hover: var(--raised);
+  --color-success: var(--positive);
+  --color-warning: var(--warning);
+  --color-danger: var(--negative);
+  --color-info: #6b7280;
+  --color-text-primary: var(--text);
+  --color-text-regular: #52525b;
+  --color-text-secondary: var(--muted);
+  --color-border: var(--border);
+  --color-border-light: var(--rule);
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-press: 140ms;
+  --t-hover: 180ms;
+  --t-ui: 240ms;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  --skeleton-base: #e9eaee;
+  --skeleton-shine: #f4f5f7;
+
+  /* 旧的渐变/阴影变量：tasteskill 禁用渐变与静置阴影，显式收敛为「平色/无」 */
+  --gradient-primary: var(--accent);
+  --gradient-success: var(--positive);
+  --gradient-vocabulary: var(--accent-soft);
+  --gradient-homework: var(--accent);
+  --shadow-sm: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --shadow-lg: 0 6px 20px rgba(16, 24, 40, 0.08);
+  --shadow-card: 0 1px 2px rgba(16, 24, 40, 0.04), 0 6px 16px rgba(16, 24, 40, 0.06);
+
+  --font-sans: -apple-system, "Segoe UI", "PingFang SC", "HarmonyOS Sans SC", "MiSans", "Source Han Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+  /* 英文单词 / 数字用衬线：词条感，这是英语学习的"主角" */
+  --font-serif: Georgia, "Songti SC", "Source Han Serif SC", "Noto Serif SC", "Times New Roman", serif;
+
+  /* Element Plus 跟随单色阶 + 平表面 */
+  --el-color-primary: #2f8ff0;
+  --el-color-primary-light-3: #6bb0f5;
+  --el-color-primary-light-5: #97c7f8;
+  --el-color-primary-light-7: #c3defb;
+  --el-color-primary-light-8: #ddeafd;
+  --el-color-primary-light-9: #e9f2fe;
+  --el-color-primary-dark-2: #1b6fd0;
+  --el-color-success: #14b8a6;
+  --el-color-warning: #e2a03f;
+  --el-color-danger: #e5484d;
+  --el-border-radius-base: 10px;
+  --el-border-radius-small: 6px;
+  --el-border-radius-round: 9999px;
+  --el-text-color-primary: #1f2d3d;
+  --el-text-color-regular: #46566b;
+  --el-text-color-secondary: #6b7a90;
+  --el-border-color: #e6ebf3;
+  --el-border-color-light: #eef2f8;
+  --el-border-color-lighter: #f3f6fb;
+  --el-fill-color-blank: #ffffff;
+  --el-fill-color-light: #f1f5fa;
+  --el-fill-color-lighter: #f7fafd;
+  --el-component-size: 36px;
+  --el-component-size-large: 42px;
+  --el-component-size-small: 30px;
+  --el-box-shadow-light: 0 1px 2px rgba(9, 9, 11, 0.05); /* taste-skill-ignore（Element Plus 浮层阴影令牌，仅菜单/弹窗用） */
+  --el-box-shadow: 0 2px 8px rgba(9, 9, 11, 0.06); /* taste-skill-ignore */
+  --el-font-family: var(--font-sans);
+}
+
+
+/* ═══════════════ 背景 — 单一中性色相，无多色渐变/光斑 ═══════════════ */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  background: var(--color-bg);
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* PWA 全面屏安全区（刘海屏/底部手势条） */
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/* ═══════════════ 滚动条（中性） ═══════════════ */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #cdd2da;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover { background: #aab0ba; background-clip: padding-box; }
+
+/* ═══════════════ 英文单词 / 词条：衬线（英语学习的"主角"） ═══════════════ */
+.word-cell,
+.en-serif {
+  font-family: var(--font-serif);
+  letter-spacing: 0.01em;
+}
+
+/* ═══════════════ 文本选区 ═══════════════ */
+::selection {
+  background: var(--accent-track);
+  color: var(--accent-ink);
+}
+
+/* ═══════════════ Element Plus 皮肤 — 统一半径 / 高度 / 四态 ═══════════════ */
+
+/* 卡片：平表面 + 1px 线，静置无阴影 */
+.el-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card); /* taste-skill-ignore（卡片柔阴影，本次风格要求） */
+  transition: box-shadow var(--t-hover) ease, border-color var(--t-hover) ease;
+}
+.el-card:hover { box-shadow: var(--shadow-lg); } /* taste-skill-ignore */
+.el-card__header {
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 18px;
+}
+.el-card__header .card-title,
+.el-card__header .el-card__header { font-weight: 600; }
+.el-card__body { padding: 18px; }
+
+/* 按钮 */
+.el-button {
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: background-color var(--t-hover) ease, border-color var(--t-hover) ease,
+    color var(--t-hover) ease, transform var(--t-press) var(--ease-out);
+}
+.el-button:active { transform: scale(0.98); }
+.el-button--default:not(.is-text):not(.is-link):not(.is-plain):not(.is-circle) {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+}
+.el-button--default:not(.is-text):not(.is-link):not(.is-plain):not(.is-circle):hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.el-button--primary:not(.is-text):not(.is-link):not(.is-plain) {
+  background: var(--accent);
+  border-color: var(--accent);
+  font-weight: 500;
+}
+.el-button--primary:not(.is-text):not(.is-link):not(.is-plain):hover {
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+}
+.el-button.is-link { color: var(--accent); }
+.el-button.is-link:hover { color: var(--accent-ink); }
+
+/* 输入 / 文本域 / 选择：统一 8px 圆角 + 品牌色聚焦环 */
+.el-input__wrapper,
+.el-textarea__inner {
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 1px var(--border) inset; /* taste-skill-ignore（Element 输入/选择/弹窗的聚焦环与浮层） */
+  background: var(--surface);
+}
+.el-input__wrapper:hover,
+.el-textarea__inner:hover { box-shadow: 0 0 0 1px var(--control) inset; }
+.el-input__wrapper.is-focus,
+.el-textarea__inner:focus {
+  box-shadow: 0 0 0 1px var(--accent) inset, 0 0 0 3px rgba(22, 35, 59, 0.14) !important; /* taste-skill-ignore（Element 输入/选择/弹窗的聚焦环与浮层） */
+}
+.el-select__wrapper {
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 1px var(--border) inset; /* taste-skill-ignore（Element 输入/选择/弹窗的聚焦环与浮层） */
+  background: var(--surface);
+}
+.el-select__wrapper.is-focused {
+  box-shadow: 0 0 0 1px var(--accent) inset, 0 0 0 3px rgba(22, 35, 59, 0.14); /* taste-skill-ignore（Element 输入/选择/弹窗的聚焦环与浮层） */
+}
+
+/* 分段控件（radio-button 组）：选中 = 近黑实心 */
+.el-radio-button__inner {
+  border-color: var(--border);
+  color: var(--muted);
+  font-weight: 500;
+}
+.el-radio-button__original-radio:checked + .el-radio-button__inner {
+  background: var(--text);
+  border-color: var(--text);
+  color: #fff;
+  box-shadow: none; /* taste-skill-ignore（Element 输入/选择/弹窗的聚焦环与浮层） */
+}
+
+/* 标签：无描边、软色块 */
+.el-tag {
+  border-radius: var(--radius-full);
+  border: none;
+  font-weight: 500;
+}
+
+/* 表格：透明表头、1px 行线、行 hover，数字列在页面里右对齐 */
+.el-table {
+  --el-table-border-color: var(--rule);
+  --el-table-row-hover-bg-color: var(--raised);
+  font-size: var(--fs-sm);
+}
+.el-table th.el-table__cell {
+  background: var(--el-fill-color-lighter);
+  color: var(--muted);
+  font-weight: 500;
+  font-size: var(--fs-xs);
+}
+.el-table th.el-table__cell,
+.el-table td.el-table__cell {
+  border-bottom: 1px solid var(--rule);
+  padding: 9px 0;
+}
+.el-table .cell { padding: 0 12px; }
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell { background: transparent; }
+
+/* 分页 */
+.el-pagination.is-background .el-pager li { border-radius: var(--radius-md); }
+.el-pagination.is-background .el-pager li.is-active { background: var(--accent); }
+
+/* 弹窗 / 确认框 / 浮层 */
+.el-dialog {
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(9, 9, 11, 0.14); /* taste-skill-ignore（浮层阴影，仅弹窗用） */
+}
+.el-dialog__header { padding: 18px 20px 10px; margin-right: 0; }
+.el-dialog__title { font-size: var(--fs-md); font-weight: 600; color: var(--text); }
+.el-dialog__body { padding: 8px 20px 18px; }
+.el-dialog__footer { padding: 12px 20px 18px; }
+.el-message-box { border-radius: 14px; }
+.el-message { border-radius: 10px; border-color: var(--border); }
+.el-popper.is-light { border-radius: 10px; }
+
+/* Tab */
+.el-tabs__item { font-size: var(--fs-base); color: var(--muted); }
+.el-tabs__item.is-active { color: var(--accent); font-weight: 600; }
+.el-tabs__active-bar { background: var(--accent); }
+.el-tabs__nav-wrap::after { height: 1px; background: var(--border); }
+
+/* 下拉项 */
+.el-dropdown-menu__item,
+.el-select-dropdown__item { font-size: var(--fs-sm); }
+.el-select-dropdown__item.is-selected { color: var(--accent); font-weight: 600; }
+
+/* 空状态 */
+.el-empty__description { color: var(--muted); font-size: var(--fs-sm); }
+
+/* ═══════════════ 通用动效工具类（克制） ═══════════════ */
+.animate-rise {
+  animation: rise-in 500ms var(--ease-out) both;
+}
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* 禁用系统下保持可见（尊重 reduced-motion，不删终态） */
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+/* ============================================================
+   移动端全局兜底（≤768px）
+   页面级样式管不到 body 下传送的弹窗/气泡，统一在这里收口
+   ============================================================ */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* iOS 聚焦输入框自动放大的根因：字号 <16px，统一抬到 16px */
+  .el-input__inner,
+  .el-textarea__inner,
+  .el-input-number,
+  .el-select .el-input__inner {
+    font-size: 16px;
+  }
+
+  /* 弹窗：近全宽 + 内容超高可滚 */
+  .el-dialog {
+    --el-dialog-margin-top: 6vh;
+    width: 94% !important;
+    max-width: 94vw !important;
+    margin: 6vh auto !important;
+  }
+  .el-dialog__header {
+    padding: 14px 16px 8px;
+    margin-right: 0;
+  }
+  .el-dialog__body {
+    padding: 12px 16px;
+    max-height: 68vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 确认框 / 消息提示 */
+  .el-message-box { width: 88% !important; max-width: 88vw; }
+  .el-message {
+    min-width: 0;
+    max-width: calc(100vw - 32px);
+  }
+
+  /* 气泡面板（通知铃铛、下拉面板等）不许超出屏幕 */
+  .el-popper {
+    max-width: calc(100vw - 16px) !important;
+  }
+
+  /* 日期范围选择器撑满 */
+  .el-date-editor--daterange.el-input__wrapper,
+  .el-date-editor--datetimerange.el-input__wrapper {
+    width: 100% !important;
+  }
+
+  /* 表格紧凑化（列多时组件自带横滚） */
+  .el-table { font-size: 13px; }
+  .el-table th.el-table__cell,
+  .el-table td.el-table__cell { padding: 6px 0; }
+  .el-table .cell {
+    padding-left: 8px;
+    padding-right: 8px;
+    word-break: break-word;
+  }
+
+  /* 分页：窄屏隐藏次要部件并允许换行 */
+  .el-pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .el-pagination .el-pagination__sizes,
+  .el-pagination .el-pagination__jump { display: none; }
+
+  /* 行内表单竖排 */
+  .el-form--inline .el-form-item {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* 卡片内边距收紧 */
+  .el-card__body { padding: 12px; }
+
+  /* 抽屉不超屏 */
+  .el-drawer.rtl, .el-drawer.ltr { width: 85% !important; }
+  .el-drawer.btt, .el-drawer.ttb { height: 70% !important; }
+
+  /* 上传拖拽区 */
+  .el-upload-dragger { padding: 20px 10px; }
+
+  /* Tabs 可左右滑 */
+  .el-tabs__nav-scroll { overflow-x: auto; }
+
+  /* 步骤条纵向时压缩间距 */
+  .el-descriptions__body .el-descriptions__table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+/* ============================================================
+   移动端增强（≤768px）：表单竖排 / 控件撑满 / 弹窗按钮等宽
+   页面级样式管不到 body 下传送的弹窗，统一在全局收口
+   ============================================================ */
+@media (max-width: 768px) {
+  /* 表单竖排：标签移到输入框上方，避免左标签挤占窄屏输入区 */
+  .el-form-item { display: block; }
+  .el-form-item__label {
+    width: auto !important;
+    max-width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 0 6px !important;
+    text-align: left !important;
+    justify-content: flex-start !important;
+    line-height: 1.5 !important;
+  }
+  .el-form-item__content { margin-left: 0 !important; }
+
+  /* 表单里写死宽度的控件统一撑满，消除右侧留白与横向溢出 */
+  .el-form-item__content > .el-input,
+  .el-form-item__content > .el-select,
+  .el-form-item__content > .el-select-v2,
+  .el-form-item__content > .el-cascader,
+  .el-form-item__content > .el-autocomplete,
+  .el-form-item__content > .el-input-number,
+  .el-form-item__content > .el-date-editor.el-input { width: 100% !important; }
+
+  /* 单选/多选组允许换行，并为折行补上纵向间距 */
+  .el-radio-group,
+  .el-checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  /* 弹窗 / 确认框底部按钮：等宽换行，拇指更好点 */
+  .el-dialog__footer,
+  .el-message-box__btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .el-dialog__footer .el-button,
+  .el-message-box__btns .el-button {
+    flex: 1 1 auto;
+    min-width: 104px;
+    margin-left: 0 !important;
+  }
+
+  /* 右上角消息通知不超出屏幕 */
+  .el-notification { max-width: calc(100vw - 24px); }
+
+  /* 日期/时间选择面板窄屏可横向滑动，不被裁死 */
+  .el-picker-panel { max-width: calc(100vw - 16px); overflow-x: auto; }
+}

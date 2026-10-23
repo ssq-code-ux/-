@@ -1,0 +1,466 @@
+{
+	"pages": [
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "管理端",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/dashboard/dashboard",
+			"style": {
+				"navigationBarTitleText": "数据看板",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/users/users",
+			"style": {
+				"navigationBarTitleText": "用户管理",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/invites/invites",
+			"style": {
+				"navigationBarTitleText": "邀请名单"
+			}
+		},
+		{
+			"path": "pages/jobs/jobs",
+			"style": {
+				"navigationBarTitleText": "家教信息",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/job-detail/job-detail",
+			"style": {
+				"navigationBarTitleText": "家教单详情"
+			}
+		},
+		{
+			"path": "pages/applications/applications",
+			"style": {
+				"navigationBarTitleText": "投递审核"
+			}
+		},
+		{
+			"path": "pages/job-form/job-form",
+			"style": {
+				"navigationBarTitleText": "发布家教单"
+			}
+		},
+		{
+			"path": "pages/batch/batch",
+			"style": {
+				"navigationBarTitleText": "批量发布"
+			}
+		},
+		{
+			"path": "pages/demands/demands",
+			"style": {
+				"navigationBarTitleText": "家长需求",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/demand-detail/demand-detail",
+			"style": {
+				"navigationBarTitleText": "需求详情"
+			}
+		},
+		{
+			"path": "pages/demand-publish/demand-publish",
+			"style": {
+				"navigationBarTitleText": "发布为家教单"
+			}
+		},
+		{
+			"path": "pages/refunds/refunds",
+			"style": {
+				"navigationBarTitleText": "退费工单",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/payments/payments",
+			"style": {
+				"navigationBarTitleText": "缴费流水",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/templates/templates",
+			"style": {
+				"navigationBarTitleText": "科目模板",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/template-form/template-form",
+			"style": {
+				"navigationBarTitleText": "模板编辑"
+			}
+		},
+		{
+			"path": "pages/config/config",
+			"style": {
+				"navigationBarTitleText": "接单配置",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/parent-home/parent-home",
+			"style": {
+				"navigationBarTitleText": "家长端"
+			}
+		},
+		{
+			"path": "pages/teacher-home/teacher-home",
+			"style": {
+				"navigationBarTitleText": "教师端"
+			}
+		},
+		{
+			"path": "pages/student-home/student-home",
+			"style": {
+				"navigationBarTitleText": "学生端"
+			}
+		},
+		{
+			"path": "pages/notifications/notifications",
+			"style": {
+				"navigationBarTitleText": "消息通知",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/parent/children",
+			"style": {
+				"navigationBarTitleText": "我的孩子",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/parent/child-detail",
+			"style": {
+				"navigationBarTitleText": "学习情况",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/parent/hw-detail",
+			"style": {
+				"navigationBarTitleText": "作业详情"
+			}
+		},
+		{
+			"path": "pages/parent/report",
+			"style": {
+				"navigationBarTitleText": "学习周报"
+			}
+		},
+		{
+			"path": "pages/parent/tutor",
+			"style": {
+				"navigationBarTitleText": "找家教",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/parent/demand-form",
+			"style": {
+				"navigationBarTitleText": "发布找家教需求"
+			}
+		},
+		{
+			"path": "pages/parent/demand-apps",
+			"style": {
+				"navigationBarTitleText": "老师简历",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/jobs",
+			"style": {
+				"navigationBarTitleText": "接单广场",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/notice",
+			"style": {
+				"navigationBarTitleText": "接单须知",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/apply",
+			"style": {
+				"navigationBarTitleText": "投递简历"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/my-applications",
+			"style": {
+				"navigationBarTitleText": "我的投递",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/profile",
+			"style": {
+				"navigationBarTitleText": "编辑简历"
+			}
+		},
+		{
+			"path": "pages/teacher-jobs/invite",
+			"style": {
+				"navigationBarTitleText": "邀请同行",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/students",
+			"style": {
+				"navigationBarTitleText": "学生管理",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/add-student",
+			"style": {
+				"navigationBarTitleText": "添加学生"
+			}
+		},
+		{
+			"path": "pages/teacher/homework",
+			"style": {
+				"navigationBarTitleText": "作业管理",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/homework-form",
+			"style": {
+				"navigationBarTitleText": "布置作业"
+			}
+		},
+		{
+			"path": "pages/teacher/homework-detail",
+			"style": {
+				"navigationBarTitleText": "作业详情"
+			}
+		},
+		{
+			"path": "pages/teacher/answer-sheet-form",
+			"style": {
+				"navigationBarTitleText": "AI 出卷"
+			}
+		},
+		{
+			"path": "pages/teacher/answer-sheet-review",
+			"style": {
+				"navigationBarTitleText": "答题卡批改"
+			}
+		},
+		{
+			"path": "pages/teacher/vocabulary",
+			"style": {
+				"navigationBarTitleText": "词汇管理",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/vocab-form",
+			"style": {
+				"navigationBarTitleText": "词汇编辑"
+			}
+		},
+		{
+			"path": "pages/teacher/words",
+			"style": {
+				"navigationBarTitleText": "背单词",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/word-cards",
+			"style": {
+				"navigationBarTitleText": "记忆卡片"
+			}
+		},
+		{
+			"path": "pages/teacher/word-quiz",
+			"style": {
+				"navigationBarTitleText": "随机测验"
+			}
+		},
+		{
+			"path": "pages/teacher/word-errors",
+			"style": {
+				"navigationBarTitleText": "错题本"
+			}
+		},
+		{
+			"path": "pages/teacher/resources",
+			"style": {
+				"navigationBarTitleText": "学习资料",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/teacher/resource-form",
+			"style": {
+				"navigationBarTitleText": "资料编辑"
+			}
+		},
+		{
+			"path": "pages/teacher/resource-detail",
+			"style": {
+				"navigationBarTitleText": "资料详情"
+			}
+		},
+		{
+			"path": "pages/student/dashboard",
+			"style": {
+				"navigationBarTitleText": "学习看板",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/student/homework",
+			"style": {
+				"navigationBarTitleText": "我的作业",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/student/homework-detail",
+			"style": {
+				"navigationBarTitleText": "作业详情"
+			}
+		},
+		{
+			"path": "pages/student/homework-submit",
+			"style": {
+				"navigationBarTitleText": "提交作业"
+			}
+		},
+		{
+			"path": "pages/student/homework-review",
+			"style": {
+				"navigationBarTitleText": "批改结果"
+			}
+		},
+		{
+			"path": "pages/student/answer-sheet",
+			"style": {
+				"navigationBarTitleText": "答题卡作答"
+			}
+		},
+		{
+			"path": "pages/student/dictation",
+			"style": {
+				"navigationBarTitleText": "单词听写"
+			}
+		},
+		{
+			"path": "pages/student/vocabulary",
+			"style": {
+				"navigationBarTitleText": "词汇学习",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/student/quiz",
+			"style": {
+				"navigationBarTitleText": "词汇测验"
+			}
+		},
+		{
+			"path": "pages/student/error-review",
+			"style": {
+				"navigationBarTitleText": "错题复习"
+			}
+		},
+		{
+			"path": "pages/student/today-review",
+			"style": {
+				"navigationBarTitleText": "今日复习"
+			}
+		},
+		{
+			"path": "pages/student/flashcards",
+			"style": {
+				"navigationBarTitleText": "记忆卡片"
+			}
+		},
+		{
+			"path": "pages/student/resources",
+			"style": {
+				"navigationBarTitleText": "学习资料",
+				"enablePullDownRefresh": true,
+				"backgroundTextStyle": "dark"
+			}
+		},
+		{
+			"path": "pages/student/resource-detail",
+			"style": {
+				"navigationBarTitleText": "资料详情"
+			}
+		},
+		{
+			"path": "pages/change-password/change-password",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/teacher/student-profile",
+			"style": {
+				"navigationBarTitleText": "编辑学生信息"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "智乐学",
+		"navigationBarBackgroundColor": "#667eea",
+		"backgroundColor": "#f5f7fa"
+	}
+}

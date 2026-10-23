@@ -1,0 +1,1 @@
+package com.example.englishtutor.dto; import lombok.Data; import java.time.LocalDate; @Data public class GoalDTO{ private Long studentId; private String title; private String description; private LocalDate deadline; }

@@ -1,0 +1,36 @@
+{
+  "id": "/",
+  "name": "智乐学",
+  "short_name": "智乐学",
+  "description": "个性化英语学习辅助平台：作业管理、词汇测验、记忆卡片、AI 助教、家长端",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#f5f7fa",
+  "theme_color": "#667eea",
+  "lang": "zh-CN",
+  "categories": ["education", "productivity"],
+  "icons": [
+    { "src": "/icons/icon-ai-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-ai-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-ai-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "单词记忆卡片",
+      "short_name": "记单词",
+      "description": "翻转卡片记单词，支持离线学习",
+      "url": "/student/flashcards",
+      "icons": [{ "src": "/icons/icon-ai-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "我的作业",
+      "short_name": "作业",
+      "description": "查看和提交作业",
+      "url": "/student/homework",
+      "icons": [{ "src": "/icons/icon-ai-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

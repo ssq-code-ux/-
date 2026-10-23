@@ -1,0 +1,97 @@
+# ============================================
+# 英语家教系统 - Docker Compose 编排（宿主机 MySQL 模式）
+#
+# 适用场景: 服务器上已装有 MySQL（数据已存在），只容器化后端 + 前端
+# 与旧版区别: 不再内置 MySQL 容器，后端通过 host.docker.internal 连宿主机 MySQL
+#
+# 快速启动:
+#   1. 复制 .env.docker 为 .env 并填写真实值（MYSQL 密码、OSS 密钥、AI key）
+#   2. 确保宿主机 MySQL 已开放给容器连接（见部署文档第 3 步）
+#   3. 停掉旧进程: pkill -f app.jar && systemctl stop nginx
+#   4. HTTPS 部署：把证书放到 ./nginx-cert/ 目录（见《HTTPS域名部署指南》）
+#   5. docker compose up -d --build
+#   6. 微信里分享用 http://服务器IP（可直接打开）；需要装 PWA 时再用浏览器走 https://服务器IP
+# ============================================
+
+services:
+  # ======================== Spring Boot 后端 ========================
+  backend:
+    build:
+      context: ./English-learner
+      dockerfile: Dockerfile
+    container_name: english-tutor-backend
+    restart: unless-stopped
+    # 内存上限：2G 小机器防 OOM 拖垮整机（与 Dockerfile 里 -Xmx512m 配合）
+    mem_limit: 900m
+    # 容器日志轮转：避免 json-file 日志无限增长占满磁盘
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # 让容器内 "host.docker.internal" 解析为宿主机 IP（Docker 20.10+）
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      TZ: Asia/Shanghai
+      # 宿主机 MySQL 连接信息（从 .env 读取）
+      MYSQL_USER: ${MYSQL_USER:-tutor}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:?请在 .env 中填写 MYSQL_PASSWORD}
+      # 阿里云 OSS（从 .env 文件读取，不写入镜像）
+      ALIYUN_OSS_ENDPOINT: ${ALIYUN_OSS_ENDPOINT:-https://oss-cn-beijing.aliyuncs.com}
+      ALIYUN_OSS_ACCESS_KEY_ID: ${ALIYUN_OSS_ACCESS_KEY_ID:?请在 .env 中填写 OSS AccessKeyId}
+      ALIYUN_OSS_ACCESS_KEY_SECRET: ${ALIYUN_OSS_ACCESS_KEY_SECRET:?请在 .env 中填写 OSS AccessKeySecret}
+      ALIYUN_OSS_BUCKET_NAME: ${ALIYUN_OSS_BUCKET_NAME:-java-ssq-mine}
+      ALIYUN_OSS_REGION: ${ALIYUN_OSS_REGION:-cn-beijing}
+      # AI 大模型（阿里云百炼/通义千问）
+      AI_API_KEY: ${AI_API_KEY:?请在 .env 中填写 AI_API_KEY}
+      # 阿里云短信（可选：家长端作业逾期提醒。四项齐全才真实发送，留空自动降级为仅站内通知）
+      ALIYUN_SMS_ACCESS_KEY_ID: ${ALIYUN_SMS_ACCESS_KEY_ID:-}
+      ALIYUN_SMS_ACCESS_KEY_SECRET: ${ALIYUN_SMS_ACCESS_KEY_SECRET:-}
+      ALIYUN_SMS_SIGN_NAME: ${ALIYUN_SMS_SIGN_NAME:-}
+      ALIYUN_SMS_TEMPLATE_CODE: ${ALIYUN_SMS_TEMPLATE_CODE:-}
+    volumes:
+      # 上传临时目录（虽然生产用 OSS，但 Multipart 解析需要）
+      - upload-tmp:/tmp/uploads
+    ports:
+      # 与宿主机 nginx 反代 127.0.0.1:8081 保持一致，nginx 配置无需改动
+      - "8081:8081"
+    networks:
+      - app-network
+
+  # ============== Nginx（前端 + 反向代理 + HTTP/HTTPS 双监听） ==============
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: english-tutor-nginx
+    restart: unless-stopped
+    # nginx 只做静态文件 + 反代（proxy_buffering off），256M 足够
+    mem_limit: 256m
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    depends_on:
+      - backend
+    ports:
+      # 80 提供完整服务（微信内可直接打开，不再强跳 443）；443 供 PWA 安装使用
+      - "80:80"
+      - "443:443"
+    volumes:
+      # SSL 证书目录（腾讯云免费证书下载 Nginx 格式，重命名为 server.crt / server.key）
+      # 注意：目录里必须先放好证书，否则 nginx 无法启动
+      - ./nginx-cert:/etc/nginx/cert:ro
+    networks:
+      - app-network
+
+# ======================== 数据卷 ========================
+volumes:
+  upload-tmp:
+    # 上传临时文件
+
+# ======================== 内部网络 ========================
+networks:
+  app-network:
+    driver: bridge

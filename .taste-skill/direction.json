@@ -1,0 +1,196 @@
+{
+ "version": 1,
+ "kind": "app",
+ "at": "2026-10-21T09:59:51.526Z",
+ "seed": 1794258145,
+ "input": {
+  "kind": "smb-admin",
+  "brief": "在线英语家教平台：教师端/学生端/家长端/管理端，作业、词汇测验、学习资料、家教接单",
+  "theme": "light",
+  "screens": [
+   "overview",
+   "list",
+   "settings"
+  ],
+  "keep": [],
+  "style": "accent-ladder"
+ },
+ "style": {
+  "id": "accent-ladder",
+  "name": "Accent ladder",
+  "theme": "light",
+  "basis": "3 screens: a newsletter home, a network analytics overview, a cap-table company home",
+  "suits": [
+   "creator",
+   "smb-admin",
+   "community",
+   "analytics"
+  ],
+  "idea": "One brand hue at full strength only on small marks, and its pale tints doing all the area work: the active nav row, a plan card, badges and progress tracks.",
+  "colourBudget": "3-10%, nearly all of it as pale tints of the one hue",
+  "tokens": {
+   "ground": "#f9fafb",
+   "surface": "#ffffff",
+   "raised": "#f3f4f6",
+   "border": "#e5e7eb",
+   "rule": "#f2f2f2",
+   "control": "#d1d5db",
+   "text": "#111827",
+   "muted": "#5f6672",
+   "accent": "#b8336a",
+   "accentSoft": "#fdf2f7",
+   "accentTrack": "#f8dbe8",
+   "accentInk": "#6b1d3e",
+   "positive": "#247b50",
+   "negative": "#c4242a",
+   "warning": "#92400e",
+   "chart": [
+    "#b8336a",
+    "#6b7280",
+    "#d4618f"
+   ],
+   "pills": {
+    "positive": [
+     "#dcfce7",
+     "#14532d"
+    ],
+    "negative": [
+     "#ffedea",
+     "#831c1e"
+    ],
+    "warning": [
+     "#fffbeb",
+     "#92400e"
+    ],
+    "neutral": [
+     "#f3f4f6",
+     "#374151"
+    ],
+    "accent": [
+     "#fdf2f7",
+     "#6b1d3e"
+    ]
+   },
+   "radius": {
+    "card": 8,
+    "control": 6
+   },
+   "font": {
+    "family": "DM Sans",
+    "second": null,
+    "fallback": "Inter, system-ui, sans-serif",
+    "sizes": {
+     "title": 32,
+     "section": 18,
+     "kpi": 24,
+     "body": 14,
+     "small": 12
+    },
+    "weights": [
+     400,
+     500,
+     600,
+     700
+    ],
+    "note": "700 for the page title only."
+   },
+   "density": "sparse",
+   "rowHeight": 45,
+   "sidebarWidth": 230,
+   "gap": 24,
+   "pad": 24,
+   "controlHeight": 32
+  },
+  "shell": "open-plane",
+  "shellAlternatives": [
+   "ruled-t-frame"
+  ],
+  "signature": "The full hue goes only on small marks: the one filled-button style, the data series and the active nav icon. Its 50-200 tints carry every area: the active nav row (tint fill with the dark ink of the hue), the plan or trial card, badges and progress tracks. The primary action may instead be near-black, as on the study's newsletter home.",
+  "identity": [
+   "The ladder built from the brand's own hue (its logo, the brief's object) in place of the dealt raspberry: the full hue on small marks, its pale tints on areas, never violet or indigo.",
+   "The product's objects in the lead block: the newsletter's latest issue as its cover, the shop's products as 40px thumbnails, the course's lessons with their own art.",
+   "A ground one level toward the hue's palest tint (#fbf7f8 for the raspberry) in place of #f9fafb, so the page and the tints read as one family."
+  ],
+  "avoid": [
+   "the full hue on large areas",
+   "a second accent family (four families on one screen was flagged in the study)",
+   "a gradient on the trial chip or upgrade button",
+   "a left accent bar on the active nav row on top of the tint (seen once in 23 screens)",
+   "violet or indigo"
+  ],
+  "notes": "All three studied screens of this kind used violet, purple or pink as the one hue. The move does not depend on the hue, so the house's violet and indigo ban holds and the library deals a raspberry instead."
+ },
+ "shell": {
+  "id": "ruled-t-frame",
+  "name": "Ruled T-frame",
+  "basis": "4 of 23 screens (3 dark, 1 light)",
+  "suits": [
+   "community",
+   "creator",
+   "smb-admin"
+  ],
+  "numbers": {
+   "sidebarWidth": "210-240",
+   "topBar": "64px with a 1px bottom rule",
+   "rules": "1px; #1a1a1a on #000, #f2f2f2 on white",
+   "navPitch": "34 (dark) or 40 (light)",
+   "switcher": "at the top bar's right end, behind a full-height 1px divider",
+   "contentGutter": "29px from the sidebar rule and the window edge"
+  },
+  "blueprint": "A 210-240px sidebar and a 64px top bar share one ground, divided only by 1px rules. The workspace or community switcher sits at the right end of the top bar behind a full-height divider; the sidebar holds the wordmark and the nav on a 34px pitch with sentence-case group labels. On dark, the active item is its label going from #bbb to #fff. The top bar must carry something real (search, the back link and object name, the switcher): two studied screens left about 1070px of it blank and were flagged.",
+  "phone": "The top bar stays at 48-56px with the switcher reduced to its mark; the sidebar becomes a full-screen menu sheet or a bottom bar of four or five destinations."
+ },
+ "screens": [
+  {
+   "name": "overview",
+   "pattern": {
+    "id": "kpi-strip-chart-rail",
+    "name": "KPI strip, main chart and a side rail",
+    "screen": "overview",
+    "kinds": [
+     "creator",
+     "smb-admin",
+     "community",
+     "analytics"
+    ],
+    "basis": "a newsletter home; a community overview",
+    "blueprint": "Title row: a 24px noun or the product's name at 600-700, an optional 14-16px grey line under it, and the one primary action on the right, bottom-aligned with that line. 16-24px below, the scope row: section tabs and the date range in one row of 32-36px controls, or a 48px segmented track with the range select inside its right end. Then a grid of 1fr and a fixed 384px rail with a 24px gap. Main column: one KPI container split by 1px dividers into 3-5 equal cells (14px grey label, 24px value at 400-600, a 12px caption naming the baseline and window), then the main chart card, which is the largest thing on the screen, then the next card, all 16px apart. Rail: 16px headings outside their cards, 8px above each and 16px after the previous card; a recent-items list of 3-5 rows on a 45px pitch with 1px rules, closed by a 30px outlined 'View all' button instead of pagination. The rail starts level with the first card, not with the title.",
+    "phone": "The rail moves below the main column; the KPI container becomes a 2-column grid; tabs scroll inside their own row."
+   }
+  },
+  {
+   "name": "list",
+   "pattern": {
+    "id": "table-filter-bar",
+    "name": "Table with tabs and a filter bar",
+    "screen": "list",
+    "kinds": [
+     "community",
+     "devtools",
+     "commerce",
+     "support",
+     "smb-admin"
+    ],
+    "basis": "an events back office, a tracks studio, a sessions overview",
+    "blueprint": "Title row: an 18-24px title on the left, at most an outlined secondary and the one primary (36px) on the right. Underline tabs for the list's states on a full-width 1px rule with a 2px indicator as wide as the label; 22-32px below, the toolbar: a search of about 252-316 x 32-36 on the left, the count ('7 events') and the sort on the right. The table sits on the panel or page ground with no card around it: a header of 12-13px grey sentence-case labels with no fill and no rule, rows on a 48-56px pitch for one line or 72-92px with a thumbnail (media height plus 24-32px), 1px rules 3-7% darker than the ground or no rules at all, the identity column given the most width, numbers right-aligned in tabular figures with the unit muted ('5 /10'), one status mark per row and one kebab at the far right. Drop a column that is empty in every row (a blank co-host column left a 300px dead band). On an overview, cap the rows and link to the full list; on the full list, state the total and load more at the end.",
+    "phone": "Rows become two-line items: identity and the key number on line 1, the secondary fields in 13px grey on line 2, the kebab at the right. Tabs scroll in their own row; the search becomes a full-width field."
+   }
+  },
+  {
+   "name": "settings",
+   "pattern": {
+    "id": "settings-with-usage",
+    "name": "Settings with usage on top",
+    "screen": "settings",
+    "kinds": [
+     "devtools",
+     "smb-admin",
+     "support"
+    ],
+    "basis": "one settings page",
+    "blueprint": "Use this only when usage is the question of the view (a plan, billing or quota view), and show only numbers no section below repeats, at a size below the h1. When a settings screen also reports usage, put 3-4 usage numbers in one row on top (a 14px grey label, a 30px regular value, a 12px change pinned to the card bottom with its window in words, a grey dash where there is no comparison) and link out to the analytics screen ('View more') instead of drawing a chart. Below, the two-column settings rows. One dark primary per screen. Keep upsell to one surface: the studied settings page carried three nags (a top banner, a setup button and a gated strip) and was flagged for it.",
+    "phone": "The usage row becomes a 2-column grid of label-value pairs; settings rows stack."
+   }
+  }
+ ]
+}

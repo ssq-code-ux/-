@@ -1,0 +1,153 @@
+{
+    /* 应用名称：显示在手机桌面图标下方 */
+    "name" : "学习助手",
+    /*
+	 * appid 必须由 DCloud 生成，不能自己编。
+	 * 打开本文件的「基础配置」可视化页 → 点 appid 输入框右侧的「重新获取」，
+	 * 首次会要求登录 DCloud 账号（免费注册），登录后自动填入形如 __UNI__1A2B3C4 的值。
+	 * 留空直接云打包会失败。appid 一旦确定不要改，改了等于换成另一个 App。
+	 */
+    "appid" : "__UNI__A740A84",
+    "description" : "英语家教系统移动端：作业管理、词汇测验、记忆卡片、AI 助教、家长端、家教接单与投递",
+    "versionName" : "1.0.6",
+    "versionCode" : 118,
+    "transformPx" : false,
+    /* ==================== App（Android / iOS）配置 ==================== */
+    "app-plus" : {
+        "usingComponents" : true,
+        "nvueStyleCompiler" : "uni-app",
+        "compilerVersion" : 3,
+        /* 启动界面：等首页渲染完再关闭，避免中间闪一下白屏 */
+        "splashscreen" : {
+            "alwaysShowBeforeRender" : true,
+            "waiting" : true,
+            "autoclose" : true,
+            "delay" : 0
+        },
+        /* 只允许竖屏：站点是移动端布局，横屏会挤成一团 */
+        "screenOrientation" : [ "portrait-primary", "portrait-secondary" ],
+        /*
+		 * 站点是 Vue3 + Vite 构建的，要求系统 WebView 内核不低于 64。
+		 * 低于该版本的老旧安卓机会弹「WebView 版本过低」提示，而不是白屏让人摸不着头脑。
+		 */
+        "webView" : {
+            "minUserAgentVersion" : "64.0.3282.116"
+        },
+        /*
+		 * 原生模块：uni.chooseImage 拍照/选图依赖 Camera 模块，
+		 * 不在这里声明的话，运行时会报「打包时未添加 camera 模块」。
+		 * 注意：这是原生模块，改动后必须重新打 APK（wgt 热更不生效）。
+		 */
+        "modules" : {
+            "Camera" : {}
+        },
+        "distribute" : {
+            "android" : {
+                /* Android 5.0 起可安装 */
+                "minSdkVersion" : 21,
+                /*
+				 * targetSdkVersion 定在 30（Android 11）而不是更高：
+				 * 30 以下 WebView 选图/选文件仍走传统存储权限，兼容性最好；
+				 * 33+ 会强制分区存储，套壳应用反而容易选不出图片。
+				 * 若以后要上架华为/小米应用市场，需按市场要求调高到 33 或 34。
+				 */
+                "targetSdkVersion" : 30,
+                /* Android 包名：全小写、不能用中文，云打包对话框里的包名要和这里一致 */
+                "packagename" : "com.englishtutor.app",
+                /*
+				 * 权限清单 —— 每一项都对应站点里真实存在的功能，没有多余申请：
+				 *   INTERNET / ACCESS_NETWORK_STATE / ACCESS_WIFI_STATE
+				 *       加载网页、启动前探测网络是否可用
+				 *   CAMERA
+				 *       学生拍照上传作业、教师拍照上传答题卡与资源（el-upload accept="image/*"）
+				 *   RECORD_AUDIO / MODIFY_AUDIO_SETTINGS
+				 *       教师语音批改（useVoiceRecorder.js）
+				 *   READ_EXTERNAL_STORAGE / WRITE_EXTERNAL_STORAGE
+				 *       Android 12 及以下选相册图片、保存周报图片与资源文件
+				 *   READ_MEDIA_IMAGES / READ_MEDIA_AUDIO
+				 *       Android 13 起替代 READ_EXTERNAL_STORAGE 的新媒体权限
+				 *   VIBRATE
+				 *       测验答题、打卡成功等轻震动反馈
+				 *   WAKE_LOCK
+				 *       录音、音频播放期间保持屏幕/CPU 不休眠
+				 */
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_MEDIA_IMAGES\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_MEDIA_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>"
+                ],
+                /*
+				 * 启动时不要主动弹「读写存储」「读取手机状态」授权框。
+				 * DCloud Runtime 默认会在首次启动就申请这两项，用户还没进 App 就被弹一脸，
+				 * 而且这两项对套壳应用毫无必要 —— 设成 none 后改为「用到时由网页自己触发」。
+				 */
+                "permissionExternalStorage" : {
+                    "request" : "none",
+                    "prompt" : ""
+                },
+                "permissionPhoneState" : {
+                    "request" : "none",
+                    "prompt" : ""
+                }
+            },
+            "ios" : {
+                "dSYMs" : false
+            },
+            "sdkConfigs" : {},
+            "icons" : {
+                "android" : {
+                    "hdpi" : "unpackage/res/icons/72x72.png",
+                    "xhdpi" : "unpackage/res/icons/96x96.png",
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                },
+                "ios" : {
+                    "appstore" : "unpackage/res/icons/1024x1024.png",
+                    "ipad" : {
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png"
+                    },
+                    "iphone" : {
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png"
+                    }
+                }
+            }
+        }
+    },
+    /* 不编译到任何小程序平台：只出 App */
+    "quickapp" : {},
+    "mp-weixin" : {
+        "appid" : "",
+        "setting" : {
+            "urlCheck" : false
+        },
+        "usingComponents" : true
+    },
+    /* 必须为 "3"：模板默认是 "2"，而本项目的页面按 Vue3 语法编写 */
+    "vueVersion" : "3"
+}
